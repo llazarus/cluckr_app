@@ -1,0 +1,35 @@
+<%- include('./partials/header') %>
+
+    <% if (clucks.length > 0) { %>
+      <% for (cluck of clucks) { %>
+        <div class="row justify-content-center mb-3">
+          <div class="col-8">
+            <div class="card">    
+              <div class="row p-2">
+                    <div class="col-1">
+                      <img src="/images/chick-svg-yellow-1.png" id="avatar" alt="">
+                    </div>
+                    <div class="col-11">
+                      <div class="card-body">
+                        <h6 class="card-title text-secondary">
+                          <%= cluck.username %> • <%= moment(cluck.created_at).fromNow() %> 
+                        </h6>
+                        <p class="card-text text-secondary">
+                          <%= cluck.content %>
+                        </p>
+                        <% if (cluck.image_url) { %>
+                          <img src="<%= cluck.image_url %>">
+                        <% } %>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    <% } else { %>
+      <h1 class="card-text text-center text-secondary">No Clucks To Display!</h1>
+    <% } %>
+
+<%- include('./partials/footer') %>
+

@@ -1,0 +1,25 @@
+<%- include('./partials/header') %>
+
+<div class="row justify-content-center">
+  <div class="class col-8">
+    <div class="card">
+      <div class="card-body">
+        <form action="/new_cluck" method="POST">
+          <label for="content" class="text-secondary">Content</label>
+          <textarea class="form-control" name="content" rows="3" placeholder="Whatchoo cluckin' 'bout?"></textarea>
+          <br>
+
+          <label for="image_url" class="text-secondary">Image Url</label>
+          <input type="url" name="image_url" class="form-control" placeholder="https://i.imgur.com/ho8CXCv.jpg">
+          <br>
+
+          <button type="submit" class="btn btn-secondary">Cluck!</button>
+
+          <a href="/" class="text-secondary ml-2">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer') %>
