@@ -1,0 +1,18 @@
+<%- include('./partials/header') %>
+
+<div class="row justify-content-center">
+  <div class="class col-8">
+    <div class="card">
+      <div class="card-body">
+        <form action="/sign_in" method="POST">
+          <label for="username" class="text-secondary">Username</label>
+          <input type="text" class="form-control" name="username" placeholder="Enter your username. . ." required>
+          <br>
+          <button type="submit" class="btn btn-outline-secondary">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer') %>
